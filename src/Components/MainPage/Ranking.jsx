@@ -60,7 +60,7 @@ const BestRanking = styled.div`
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding-right: 100px;
+    padding-right: 190px;
 
   }
 
@@ -68,8 +68,7 @@ const BestRanking = styled.div`
     width: 300px;
     height: 300px;
     margin-top: 200px;
-    margin-left: -210px;
-    padding-right: -20px;
+    margin-left: -200px;
   }
 
   img {
