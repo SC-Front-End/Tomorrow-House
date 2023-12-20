@@ -27,9 +27,7 @@ const Footer = () => {
                             <p className='info-text03'>이용약관</p>
                         </div>
                     </div>
-
                 </div>
-
             </FooterSection>
         </>
     );
@@ -45,41 +43,48 @@ const FooterSection = styled.div`
     justify-content: space-between;
     background-color: #F1F1F1;
     widht: 100%;
-    height: 400px;
+    height: 300px;
     padding-left: 290px;
     padding-right: 290px;
 }
 
 .info-01 {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .tel-number {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     margin-right: 30px;
 }
 
 .time {
-    font-size: 22px;
-    margin-right: 40px;
+    font-size: 20px;
+    margin-right: 24px;
 }
 .time-info01 {
-    margin-right: 50px;
+    font-size: 15px;
+    margin-right: 45px;
+}
+.time-info02{
+    font-size: 15px;
+
 }
 .time-info03 {
-    margin-right: 107px;
+    font-size: 15px;
+    margin-right: 100px;
+
 }
 
 
 .info-02 {
-    margin-top: 90px;
+    margin-top: 50px
 }
 
 .kakao {
     background-color: #fff;
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 20px;
     padding-top: 20px;
@@ -91,7 +96,7 @@ const FooterSection = styled.div`
 .email {
     background-color: #fff;
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 20px;
     padding-top: 20px;
@@ -102,12 +107,13 @@ const FooterSection = styled.div`
 }
 
 .share {
-    margin-top: 90px;
+    margin-top: 50px
 }
 
 .info-03 {
     margin-right: 130px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .info-text02 {
     margin-right: 40px;

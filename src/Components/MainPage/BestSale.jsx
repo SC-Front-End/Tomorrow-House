@@ -5,7 +5,7 @@ const BestSale = () => {
     return (
         <SaleSection>
             <header className='new-title'>
-                <h1>오늘의 베스트 상품</h1>
+                <h2>오늘의 베스트 상품</h2>
                 {/* <p>더보기</p> */}
             </header>
             <div className='bigsale-item'>
