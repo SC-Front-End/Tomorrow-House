@@ -8,8 +8,14 @@ import styled from "styled-components";
 import titlepic from "./assets/titlepic.png";
 
 const UserLogin = styled.div`
-  .user-login {
+  .user-login-main {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .user-login {
     padding: 15px;
     width: 280px;
     display: flex;
@@ -130,41 +136,43 @@ const Login = () => {
   return (
     <>
       <UserLogin>
-        <div className="user-login">
-          <div className="user-title-image-login">
-            <Link to="/">
-              <img src={titlepic} alt="" />
+        <div className="user-login-main">
+          <div className="user-login">
+            <div className="user-title-image-login">
+              <Link to="/">
+                <img src={titlepic} alt="" />
+              </Link>
+            </div>
+            <div className="user-id-login">
+              <input
+                type="email"
+                name="user_id"
+                value={userId}
+                onChange={onUserIdChange}
+                placeholder=" 이메일"
+              />
+              <div className="id-message-login">{idMessage}</div>
+            </div>
+            <div className="user-pwd-login">
+              <input
+                type="password"
+                name="user_pwd"
+                value={userPassword}
+                onChange={onUserPasswordChange}
+                placeholder=" 비밀번호"
+              />
+              <div className="id-message-login">{passMessage}</div>
+            </div>
+            <button
+              onClick={onLoginButtonClickHandler}
+              className="user-login-button"
+            >
+              로그인
+            </button>
+            <Link className="link-login" to="/signup">
+              회원가입 하기
             </Link>
           </div>
-          <div className="user-id-login">
-            <input
-              type="email"
-              name="user_id"
-              value={userId}
-              onChange={onUserIdChange}
-              placeholder=" 이메일"
-            />
-            <div className="id-message-login">{idMessage}</div>
-          </div>
-          <div className="user-pwd-login">
-            <input
-              type="password"
-              name="user_pwd"
-              value={userPassword}
-              onChange={onUserPasswordChange}
-              placeholder=" 비밀번호"
-            />
-            <div className="id-message-login">{passMessage}</div>
-          </div>
-          <button
-            onClick={onLoginButtonClickHandler}
-            className="user-login-button"
-          >
-            로그인
-          </button>
-          <Link className="link-login" to="/signup">
-            회원가입 하기
-          </Link>
         </div>
       </UserLogin>
     </>
