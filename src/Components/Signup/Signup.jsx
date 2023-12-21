@@ -5,8 +5,15 @@ import titlepic from "./assets/titlepic.png";
 import { Link } from "react-router-dom";
 
 const UserSignup = styled.div`
-  .user-signup {
+  .user-signup-main {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .user-signup {
     padding: 15px;
     width: 280px;
     display: flex;
@@ -118,7 +125,7 @@ const Signup = () => {
   const [allCheckMessage, setAllCheckMessage] = useState("");
 
   const onUserNameChange = (e) => {
-    setUserName(e.target.value);
+    setUserName(e.target.value.trim());
     setNameMessage("");
   };
 
@@ -307,116 +314,118 @@ const Signup = () => {
 
   return (
     <UserSignup>
-      <div className="user-signup">
-        <div className="user-title-image-signup">
-          <Link to="/">
-            <img src={titlepic} alt="" />
+      <div className="user-signup-main">
+        <div className="user-signup">
+          <div className="user-title-image-signup">
+            <Link to="/">
+              <img src={titlepic} alt="" />
+            </Link>
+            <div className="user-title-text-signup">
+              <h1>회원가입</h1>
+            </div>
+          </div>
+          <div className="user-name-signup">
+            <input
+              type="text"
+              name="user_name"
+              value={userName}
+              onChange={onUserNameChange}
+              placeholder=" 이름"
+            />
+            <div className="id-message-signup">{nameMessage}</div>
+          </div>
+          <div className="user-id-signup">
+            <input
+              type="email"
+              name="user_id"
+              value={userEmail}
+              onChange={onUserEmailChange}
+              placeholder=" 이메일"
+            />
+            <div className="id-message-signup">{emailMessage}</div>
+          </div>
+          <div className="user-pwd-signup">
+            <input
+              type="password"
+              name="user_pwd"
+              value={userPassword}
+              onChange={onUserPasswordChange}
+              placeholder=" 비밀번호"
+            />
+            <div className="id-message-signup">{passMessage}</div>
+          </div>
+          <div className="user-pwd2-signup">
+            <input
+              type="password"
+              name="user_pwd2"
+              value={userPassword2}
+              onChange={onUserPassword2Change}
+              placeholder=" 비밀번호 확인"
+            />
+            <div className="id-message-signup">{pass2Message}</div>
+            <br />
+            <div className="id-message-signup">{passMatchMessage}</div>
+          </div>
+
+          {/* 동의 사항 체크 */}
+          <div className="checkbox-box-signup">
+            <div className="checkbox-signup">
+              <input
+                type="checkbox"
+                id="all-check"
+                checked={allCheck}
+                onChange={allBtnEvent}
+              />
+              <label htmlFor="all-check">
+                <b>전체동의</b>
+              </label>
+            </div>
+            <div className="checkbox-signup">
+              <input
+                type="checkbox"
+                id="check1"
+                checked={ageCheck}
+                onChange={ageBtnEvent}
+              />
+              <label htmlFor="check1">
+                만 14세 이상입니다 <span>(필수)</span>
+              </label>
+            </div>
+            <div className="checkbox-signup">
+              <input
+                type="checkbox"
+                id="check2"
+                checked={userCheck}
+                onChange={userBtnEvent}
+              />
+              <label htmlFor="check2">
+                이용약관 <span>(필수)</span>
+              </label>
+            </div>
+            <div className="checkbox-signup">
+              <input
+                type="checkbox"
+                id="check3"
+                checked={marketingCheck}
+                onChange={marketingBtnEvent}
+              />
+              <label htmlFor="check3">
+                마케팅 동의 <span>(선택)</span>
+              </label>
+            </div>
+            <div className="id-message-signup">{allCheckMessage}</div>
+          </div>
+
+          <button
+            className="user-signup-button"
+            onClick={onSignupButtonClickHandler}
+          >
+            회원 가입
+          </button>
+          <Link className="link-signup" to="/">
+            로그인 하기
           </Link>
-          <div className="user-title-text-signup">
-            <h1>회원가입</h1>
-          </div>
         </div>
-        <div className="user-name-signup">
-          <input
-            type="text"
-            name="user_name"
-            value={userName}
-            onChange={onUserNameChange}
-            placeholder=" 이름"
-          />
-          <div className="id-message-signup">{nameMessage}</div>
-        </div>
-        <div className="user-id-signup">
-          <input
-            type="email"
-            name="user_id"
-            value={userEmail}
-            onChange={onUserEmailChange}
-            placeholder=" 이메일"
-          />
-          <div className="id-message-signup">{emailMessage}</div>
-        </div>
-        <div className="user-pwd-signup">
-          <input
-            type="password"
-            name="user_pwd"
-            value={userPassword}
-            onChange={onUserPasswordChange}
-            placeholder=" 비밀번호"
-          />
-          <div className="id-message-signup">{passMessage}</div>
-        </div>
-        <div className="user-pwd2-signup">
-          <input
-            type="password"
-            name="user_pwd2"
-            value={userPassword2}
-            onChange={onUserPassword2Change}
-            placeholder=" 비밀번호 확인"
-          />
-          <div className="id-message-signup">{pass2Message}</div>
-          <br />
-          <div className="id-message-signup">{passMatchMessage}</div>
-        </div>
-
-        {/* 동의 사항 체크 */}
-        <div className="checkbox-box-signup">
-          <div className="checkbox-signup">
-            <input
-              type="checkbox"
-              id="all-check"
-              checked={allCheck}
-              onChange={allBtnEvent}
-            />
-            <label htmlFor="all-check">
-              <b>전체동의</b>
-            </label>
-          </div>
-          <div className="checkbox-signup">
-            <input
-              type="checkbox"
-              id="check1"
-              checked={ageCheck}
-              onChange={ageBtnEvent}
-            />
-            <label htmlFor="check1">
-              만 14세 이상입니다 <span>(필수)</span>
-            </label>
-          </div>
-          <div className="checkbox-signup">
-            <input
-              type="checkbox"
-              id="check2"
-              checked={userCheck}
-              onChange={userBtnEvent}
-            />
-            <label htmlFor="check2">
-              이용약관 <span>(필수)</span>
-            </label>
-          </div>
-          <div className="checkbox-signup">
-            <input
-              type="checkbox"
-              id="check3"
-              checked={marketingCheck}
-              onChange={marketingBtnEvent}
-            />
-            <label htmlFor="check3">
-              마케팅 동의 <span>(선택)</span>
-            </label>
-          </div>
-          <div className="id-message-signup">{allCheckMessage}</div>
-        </div>
-
-        <button
-          className="user-signup-button"
-          onClick={onSignupButtonClickHandler}
-        >
-          회원 가입
-        </button>
-        <Link className="link-signup" to="/">
-          로그인 하기
-        </Link>
       </div>
     </UserSignup>
   );
