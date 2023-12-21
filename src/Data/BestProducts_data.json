@@ -1,0 +1,103 @@
+[
+    {
+      "item_code": "1",
+      "option_code": "SS/Q/K",
+      "item_title": "푹신한 침대입니다",
+      "unit_price": 299000,
+      "stock_quantity": 100,
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "3",
+      "option_code": null, 
+      "item_title": "맥북입니다.",
+      "unit_price": 99000,
+      "stock_quantity": 30, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2016/11/18/13/03/apple-1834328_1280.jpg",
+      "view_count": 20,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "4",
+      "option_code": "DK053",
+      "item_title": "소파입니다.",
+      "unit_price": 199000,
+      "stock_quantity": 70,
+      "image_path_1": "https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg",
+      "view_count": 257,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+ 
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    },
+    {
+      "item_code": "5",
+      "option_code": "SS/Q/K", 
+      "item_title": "침대입니다.",
+      "unit_price": 299000,
+      "stock_quantity": 120, 
+      "image_path_1": "https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg",
+      "view_count": 90,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31"
+    }
+   
+  ]
