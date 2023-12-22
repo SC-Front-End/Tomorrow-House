@@ -4,6 +4,8 @@ import CategoryList from './CategoryList';
 import BestSale from './BestSale';
 import Ranking from './Ranking';
 
+
+
 const MainPage = () => {
     return (
         <>
@@ -12,7 +14,6 @@ const MainPage = () => {
             <BestSale />
             <Ranking />
         </>
-
     );
 };
 
