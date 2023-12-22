@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// 잠시빼보기 value={props.selected}
-
 
 const BestProductFilter = (props) => {
 
@@ -18,7 +16,6 @@ const BestProductFilter = (props) => {
           <FilterButton  onClick={() => buttonClickChangeHandler('가격낮은순')}>가격낮은순테스트</FilterButton>
           <FilterButton  onClick={() => buttonClickChangeHandler('가격높은순')}>가격높은순테스트</FilterButton>
         </FilterControl>
-            
         </>
     );
 };

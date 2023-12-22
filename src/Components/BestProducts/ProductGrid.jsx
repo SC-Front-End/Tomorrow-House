@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const fontFamily = "맑은 고딕";
+
 
 const Cardbox = styled.div`
   width: calc(25% - 25px);
@@ -37,13 +39,13 @@ const Title = styled.div`
   margin-top: 10px;
   color: #111111;
   line-height: 1.75;
-  font-family: 맑은 고딕;
+  font-family: ${fontFamily};
   font-weight: 900;
 `;
 const SubInfo = styled.div`
   font-size: 1.1rem;
   color: #8e7b7b;
-  font-family: 맑은 고딕;
+  font-family: ${fontFamily};
   font-weight: 550;
   margin-top: 2px;
 `;
@@ -52,7 +54,7 @@ const Price = styled.div`
   margin: 15px 0; /* 위아래 15px, 좌우는 0 */
   color: #111111;
   line-height: 1.75;
-  font-family: 맑은 고딕;
+  font-family: ${fontFamily};
   font-weight: 900;
 `;
 
