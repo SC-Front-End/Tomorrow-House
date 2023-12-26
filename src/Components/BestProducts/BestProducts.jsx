@@ -81,13 +81,30 @@ const Box = styled.div`
   justify-content: center;
   margin: 0 auto;
   padding: 3rem 12rem;
+
+  @media (max-width: 768px){
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+
+    
+}
 `;
 
 const List = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 768px){
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+ 
+  }
 `;
+
+
 
 
 

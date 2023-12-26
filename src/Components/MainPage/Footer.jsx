@@ -46,6 +46,18 @@ const FooterSection = styled.div`
     height: 300px;
     padding-left: 290px;
     padding-right: 290px;
+
+    @media (max-width: 768px){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: #F1F1F1;
+    widht: 100%;
+    height: 200px;
+    padding-left: 190px;
+    padding-right: 190px;
+
+  }
 }
 
 .info-01 {
@@ -91,6 +103,18 @@ const FooterSection = styled.div`
     padding-bottom: 20px;
     padding-left: 50px;
     padding-right: 50px;
+
+    @media (max-width: 768px){
+    background-color: #fff;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+  }
 }
 
 .email {
@@ -104,6 +128,20 @@ const FooterSection = styled.div`
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 30px;
+
+    @media (max-width: 768px){
+        background-color: #fff;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+
+  }
 }
 
 .share {

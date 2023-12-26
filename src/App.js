@@ -12,7 +12,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path='/empty' element={<Empty />} />
+          <Route path='/empty' element={<Empty />} />z
         </Routes>
         <Footer />
       </div>
