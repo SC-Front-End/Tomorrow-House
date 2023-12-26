@@ -10,14 +10,29 @@ const Cardbox = styled.div`
   margin: 0.5rem;
   margin-bottom: 30px;
   box-sizing: border-box;
+
+  @media (max-width: 768px){
+  width: calc(33% - 8px);
+  padding: 4px 1px;
+  vertical-align: baseline;
+  margin: 0.2rem;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+  }
 `;
 const Link = styled.a`
   cursor: pointer;
 `;
 const Wrapper = styled.div`
   display: block;
-  position: relative; /* 순위아이콘테스트중 */
-  overflow: hidden;  /*이거하면 왜 무료배송 특가가 사라짐? */
+  position: relative; 
+  overflow: hidden;  
+
+  @media (max-width: 768px){
+  display: block;
+  position: relative; 
+  overflow: hidden; 
+  }
 
 `;
 
@@ -32,6 +47,19 @@ const Img = styled.img`
   &:hover {
     transform: scale(1.05);
 }
+
+@media (max-width: 768px){
+  width: 100%;
+  height: 100%;
+  max-width: 768px;
+  max-height: 768px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 `;
 
 const Title = styled.div`
@@ -41,6 +69,16 @@ const Title = styled.div`
   line-height: 1.75;
   font-family: ${fontFamily};
   font-weight: 900;
+
+  @media (max-width: 768px){
+  font-size: 10px;
+  margin-top: 2px;
+  color: #111111;
+  line-height: 1.75;
+  font-family: ${fontFamily};
+  font-weight: 900;
+}
+
 `;
 const SubInfo = styled.div`
   font-size: 1.1rem;
@@ -48,6 +86,14 @@ const SubInfo = styled.div`
   font-family: ${fontFamily};
   font-weight: 550;
   margin-top: 2px;
+
+  @media (max-width: 768px){
+  font-size: 10px;
+  color: #8e7b7b;
+  font-family: ${fontFamily};
+  font-weight: 550;
+  margin-top: 2px;
+}
 `;
 const Price = styled.div`
   font-size: 1.1rem;
@@ -56,6 +102,15 @@ const Price = styled.div`
   line-height: 1.75;
   font-family: ${fontFamily};
   font-weight: 900;
+
+  @media (max-width: 768px){
+  font-size: 10px;
+  margin-top: 2px;
+  color: #111111;
+  line-height: 1.75;
+  font-family: ${fontFamily};
+  font-weight: 900;
+}
 `;
 
 const RankIcon = styled.div`
@@ -86,6 +141,15 @@ const FreeShippingIcon = styled.div`
   border-radius: 8px;   
   font-size: 0.8rem;
   font-weight: 700;
+
+  @media (max-width: 768px){
+  background-color: #EEEEEE;
+  color: #000000;
+  padding: 1px 2px;
+  border-radius: 8px;   
+  font-size: 10px;
+  font-weight: 700;
+}
 `;
 
 const SpecialPriceIcon = styled.div`
@@ -97,11 +161,20 @@ const SpecialPriceIcon = styled.div`
   font-size: 0.8rem;
   font-weight: 700;
   flex-direction: row;
+
+  @media (max-width: 768px){
+  margin-left: 10px;
+  background-color: #E87C6C;
+  color: #fff;
+  padding: 1px 2px;
+  border-radius: 8px;   
+  font-size: 10px;
+  font-weight: 700;
+  flex-direction: row;
+}
 `;
 
 
-//RankIcon border-radius: 50%가 아님
-//스타일 부분 다 뜯어보기
 //UI부분
 
 

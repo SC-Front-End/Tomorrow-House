@@ -30,6 +30,15 @@ const FilterControl = styled.div`
     justify-content:center;
     width: 100%;
     margin: 0.3rem 0;
+
+    @media (max-width: 768px){
+    display: flex;
+    flex-direction: row; /* 자식요소 세로 정렬 */
+    align-items:center; /*자식요소를 수직으로 중앙 정렬 */
+    justify-content:center;
+    width: 100%;
+    margin: 0.1rem 0;
+}
 `;
 
 
@@ -44,6 +53,21 @@ const FilterButton =styled.button`
     background-color: white;
     font-weight: 500;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+
+    @media (max-width: 768px){
+    font: inherit;
+    font-Size: 0.8rem;
+    margin: 0rem 0.3rem;
+    padding: 0.5rem 0.6rem 0.5rem 0.5rem;
+    border:none;
+    text-align: right;
+    background-color: white;
+    font-weight: 500;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    
+}
 `
 
 

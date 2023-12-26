@@ -48,6 +48,14 @@ const NavComponent = styled.div`
     justify-content: start;
     background-color: #fff;
     margin-bottom: 10px;
+
+
+  @media (max-width: 768px){
+    display: flex;
+    justify-content: start;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
   }
 
   .logo {
@@ -64,6 +72,24 @@ const NavComponent = styled.div`
     margin-left: 50px;
 
     padding-top: 10px;
+
+
+    @media (max-width: 768px){
+    background-color: #6EB636;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-left: 50px;
+
+    padding-top: 10px;
+
+  }
   }
 
   ul {
@@ -76,11 +102,27 @@ const NavComponent = styled.div`
     margin-left: 60px;
     margin-top: 24px;
     font-weight: bold;
+
+    @media (max-width: 768px){
+    float: left;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 24px;
+    font-weight: bold;
+
+  }
   }
 
   .nav-menu2 {
     display: flex;
     justify-content: end;
     padding-left: 360px;
+
+    @media (max-width: 768px){
+     display: flex;
+    justify-content: end;
+    padding-left: 1px; /*수정 */
+
+  }
   }
 `;
