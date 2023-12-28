@@ -131,5 +131,9 @@ img{
     border-radius: 30%;
 }
 
+.li-text {
+    text-align: center;
+}
+
 
 `;
