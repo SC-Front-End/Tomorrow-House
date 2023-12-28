@@ -52,7 +52,7 @@ const BannerContainer = styled.div`
 img {
     margin-top: 10px;
     height: 300px;
-    widht: max-widht;
+    widht: 100%;
     padding-right: 20px;
 }
 
