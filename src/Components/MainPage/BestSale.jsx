@@ -114,19 +114,20 @@ li {
     color: #6EB636;
     font-weight: bold;
     float: left;
-    margin-left: 14px;
+    margin-left: 0px;
 }
 
 .item-price {
     font-weight: bold;
     margin-right: 150px;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 .item-btn {
     float: left;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 0px;
+    margin-top: 13px;
 }
 
 .free-btn {
