@@ -28,7 +28,13 @@ const GiftItem = () => {
           <div className="user-1">
             <div className="user-center">
               <div>
-                <div className="user-face"></div>
+                <div>
+                  <img
+                    className="user-face"
+                    src="https://i.pinimg.com/564x/2b/62/6f/2b626f3f0dc0fdd67d97db604a8af895.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="user">
                 <div className="user-name">서울에 사는 김00님</div>
@@ -41,7 +47,13 @@ const GiftItem = () => {
           <div className="user-1">
             <div className="user-center">
               <div>
-                <div className="user-face"></div>
+                <div>
+                  <img
+                    className="user-face"
+                    src="https://i.pinimg.com/originals/4b/e5/f3/4be5f377959674df9c2fe172df272482.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="user">
                 <div className="user-name">서울에 사는 김00님</div>
@@ -135,13 +147,14 @@ const GiftComponent = styled.div`
   }
 
   .user-face {
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/d8f932183398029.653f7910a4099.jpg");
     width: 255px;
     height: 255px;
     border-radius: 50%;
     position: absolute;
     margin-top: 25px;
     margin-left: 30px;
+
+    object-fit: cover;
   }
 
   .user-name {

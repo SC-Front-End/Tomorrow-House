@@ -28,11 +28,6 @@ const RankingBest = () => {
                   alt="01"
                 />
               </div>
-              {/* <div className="ranking-btn">
-                <button>Carrier more</button>
-                <button>Carrier more</button>
-                <button>Carrier more</button>
-              </div> */}
             </div>
           </div>
         </div>
@@ -91,27 +86,6 @@ const RankingHere = styled.div`
     margin-left: 30px;
     width: 320px;
     border-radius: 10px;
+    margin-bottom: -19px;
   }
-
-  /* .ranking-btn {
-    display: flex;
-    justify-content: center;
-  }
-  button {
-    display: flex;
-    justify-content: center;
-
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    border-style: none;
-
-    margin-right: -20px;
-    margin-left: 190px;
-  } */
 `;
