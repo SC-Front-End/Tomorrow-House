@@ -1,19 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import validator from "validator";
 import styled from "styled-components";
 
 import titlepic from "./assets/titlepic.png";
+//import axios from "axios";
+import { Cookies } from "react-cookie";
+
+const cookie = new Cookies();
 
 const UserLogin = styled.div`
   .user-login-main {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .user-login {
     padding: 15px;
@@ -85,11 +89,14 @@ const UserLogin = styled.div`
 `;
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [userId, setUserId] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
   const [idMessage, setIdMessage] = useState("");
   const [passMessage, setPassMessage] = useState("");
+  const [sendErrorMesssage, setSendErrorMessage] = useState("");
 
   const onUserIdChange = (e) => {
     setUserId(e.target.value);
@@ -129,7 +136,34 @@ const Login = () => {
     }
 
     if (idMessage === "" && userId !== "" && userPassword !== "") {
-      alert(userId + ", " + userPassword + " 로그인 요청합니다!");
+      if (userId === "lsh1111@hanmail.net" && userPassword === "11111") {
+        setSendErrorMessage("");
+
+        const pass = encodeURI("lsh1111@hanmail.net");
+        cookie.set("token", pass, { path: "/" });
+
+        navigate("/");
+      } else {
+        setSendErrorMessage("아이디나 비밀번호가 일치하지 않습니다");
+      }
+      /*      axios
+        .post(
+          "http://mini.jh1105.xyz:5305/api/sign/login",
+          JSON.stringify(data),
+          {
+            headers: {
+              "Content-Type": "application/json;charset=UTF-8",
+              data,
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          setSendErrorMessage(error.message);
+        });
+        */
     }
   };
 
@@ -169,9 +203,14 @@ const Login = () => {
             >
               로그인
             </button>
+            <div className="id-message-login">{sendErrorMesssage}</div>
             <Link className="link-login" to="/signup">
               회원가입 하기
             </Link>
+            <div>
+              아이디 : lsh1111@hanmail.net
+              <br /> 비밀번호 : 11111
+            </div>
           </div>
         </div>
       </UserLogin>

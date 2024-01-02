@@ -4,6 +4,7 @@ import styled from "styled-components";
 import titlepic from "./assets/titlepic.png";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
+//import axios from "axios";
 
 const UserSignup = styled.div`
   .user-signup-main {
@@ -130,6 +131,7 @@ const Signup = () => {
   const [userCheck, setUserCheck] = useState(false);
   const [marketingCheck, setMarketingCheck] = useState(false);
   const [allCheckMessage, setAllCheckMessage] = useState("");
+  //const [sendErrorMessage, setSendErrorMessage] = useState("");
 
   const onUserNameChange = (e) => {
     setUserName(e.target.value.trim());
@@ -261,7 +263,7 @@ const Signup = () => {
     }
   };
 
-  const onSignupButtonClickHandler = () => {
+  const onSignupButtonClickHandler = async () => {
     if (userName === "") {
       setNameMessage("이름란이 공백입니다!");
     } else {
@@ -367,17 +369,40 @@ const Signup = () => {
       alert(
         userName +
           ", " +
-          userNickName +
-          ", " +
           userEmail +
           ", " +
-          userPhone +
-          ", " +
-          userAddress +
-          ", " +
           userPassword +
-          " 회원가입 요청합니다!"
+          "회원가입 요청합니다!"
       );
+      /*    await axios
+        .post(
+          "http://mini.jh1105.xyz:5305/api/sign/register",
+          {
+            headers: {
+              "Content-Type": "application/json;charset=UTF-8",
+              //"Access-Control-Allow-Origin": "*",
+            },
+            withCredentials: true,
+          },
+          {
+            body: JSON.stringify({
+              email: userEmail,
+              password: userPassword,
+              nickname: userNickName,
+              phone_number: userPhone,
+              gender: "null",
+              address: userAddress,
+              profile_image_path: "null",
+            }),
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          setSendErrorMessage(error.message);
+        });
+*/
     }
   };
 
@@ -403,6 +428,7 @@ const Signup = () => {
               placeholder=" 이름"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="이름"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {nameMessage && (
@@ -418,6 +444,7 @@ const Signup = () => {
               placeholder=" 닉네임"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="닉네임"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {nickNameMessage && (
@@ -433,6 +460,7 @@ const Signup = () => {
               placeholder=" 이메일"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="이메일"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {emailMessage && (
@@ -448,6 +476,7 @@ const Signup = () => {
               placeholder=" 핸드폰 번호"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="핸드폰 번호"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {phoneMessage && (
@@ -463,6 +492,7 @@ const Signup = () => {
               placeholder=" 주소"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="주소"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {addressMessage && (
@@ -478,6 +508,7 @@ const Signup = () => {
               placeholder=" 비밀번호"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="비밀번호"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {passMessage && (
@@ -493,6 +524,7 @@ const Signup = () => {
               placeholder=" 비밀번호 확인"
               data-tooltip-id="my-tooltip"
               data-tooltip-content="비밀번호 확인"
+              data-tooltip-variant="info"
               data-tooltip-place="left-start"
             />
             {pass2Message && (
@@ -561,7 +593,10 @@ const Signup = () => {
           >
             회원 가입
           </button>
-          <Link className="link-signup" to="/">
+          {/*sendErrorMessage && (
+            <div className="id-message-signup">{sendErrorMessage}</div>
+          )*/}
+          <Link className="link-signup" to="/login">
             로그인 하기
           </Link>
         </div>
