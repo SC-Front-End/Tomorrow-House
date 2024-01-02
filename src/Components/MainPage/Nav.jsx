@@ -14,6 +14,14 @@ const Nav = () => {
     navigate("/")
   };
 
+  const navigateLogin = () => {
+    navigate("/login")
+  };
+
+  const navigateProductList = () => {
+    navigate("/products")
+  };
+
   return (
     <NavComponent>
       <div className='nav-menu1'>
@@ -22,7 +30,7 @@ const Nav = () => {
         </div>
         <ul className='menu-text'>
           <li>커뮤니티</li>
-          <li>쇼핑</li>
+          <li onClick={navigateProductList}>쇼핑</li>
           <li>베스트샵</li>
         </ul>
         <div className='nav-menu2'>
@@ -30,7 +38,7 @@ const Nav = () => {
             <li onClick={navigateEmpty}>
               장바구니
             </li>
-            <li>로그인</li>
+            <li onClick={navigateLogin}>로그인</li>
             <li>회원가입</li>
             <li>고객센터</li>
           </ul>
@@ -64,6 +72,11 @@ const NavComponent = styled.div`
     margin-left: 50px;
 
     padding-top: 10px;
+  }
+
+  .logo:hover{
+    background-color: green;
+    color: #fff;
   }
 
   ul {

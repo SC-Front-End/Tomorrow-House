@@ -9,9 +9,7 @@ import Footer from '../MainPage/Footer';
 const BestProductList = () => {
     return (
         <>
-            <Nav/>
             <BestProducts items={bestProducts_data} />
-            <Footer />
         </>
     );
 };
