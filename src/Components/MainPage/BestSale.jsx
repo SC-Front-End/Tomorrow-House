@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from 'react';
 import styled from "styled-components";
+import data from "./data";
 
 const BestSale = () => {
+
+  let [products] = useState(data)
+
   return (
     <SaleSection>
       <header className="new-title">
@@ -14,11 +18,7 @@ const BestSale = () => {
               src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/162303132447303472.jpeg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
               alt="01"
             />
-            <div className="product-img-text">
-              <p className="item-title">비침없는 도톰 레이스/쉬폰 커튼</p>
-              <span className="item-rate">23%</span>
-              <span className="item-price">16,800</span>
-            </div>
+            <Card item={products[0]}></Card>
             <div className="item-btn">
               <button className="free-btn">할인 쿠폰</button>
               <button className="big-btn">특가</button>
@@ -29,13 +29,7 @@ const BestSale = () => {
               src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/168610157896491054.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
               alt="01"
             />
-            <div className="product-img-text">
-              <p className="item-title">
-                삼성전자 스마트모니터 M7 S43 화이트 4K UHD
-              </p>
-              <span className="item-rate">42%</span>
-              <span className="item-price">579,000</span>
-            </div>
+            <Card item={products[1]}></Card>
             <div className="item-btn">
               <button className="free-btn">무료 배송</button>
               <button className="big-btn">특가</button>
@@ -46,13 +40,7 @@ const BestSale = () => {
               src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/168974772932722622.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
               alt="01"
             />
-            <div className="product-img-text">
-              <p className="item-title">
-                삼성 81cm M5 S32 삼탠바이미 패키지 OTT
-              </p>
-              <span className="item-rate">23%</span>
-              <span className="item-price">419,000</span>
-            </div>
+            <Card item={products[2]}></Card>
             <div className="item-btn">
               <button className="free-btn">무료 배송</button>
               <button className="big-btn">특가</button>
@@ -63,13 +51,7 @@ const BestSale = () => {
               src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/168731059927618146.jpg?gif=1&w=360&h=360&c=c&q=0.8&webp=1"
               alt="01"
             />
-            <div className="product-img-text">
-              <p className="item-title">
-                후기6만돌파! 40수 코마사 호텔수건 200g 10장
-              </p>
-              <span className="item-rate">62%</span>
-              <span className="item-price">28,900</span>
-            </div>
+            <Card item={products[3]}></Card>
             <div className="item-btn">
               <button className="free-btn">오늘 출발</button>
               <button className="big-btn">특가</button>
@@ -80,6 +62,16 @@ const BestSale = () => {
     </SaleSection>
   );
 };
+
+function Card(props) {
+  return (
+    <div className="product-img-text">
+      <p className="item-title">{props.item.title}</p>
+      <span className="item-rate">{props.item.rate}</span>
+      <span className="item-price">{props.item.price}</span>
+    </div>
+  );
+}
 
 export default BestSale;
 
