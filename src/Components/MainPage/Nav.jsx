@@ -1,29 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const navigate = useNavigate();
 
-  const navigateEmpty = () => {
+  //장바구니
+  const navigateCart = () => {
     if (navigate) {
-      navigate("/empty");
+      navigate("/cart");
     }
   };
-
+  //메인페이지
   const navigateMainPage = () => {
     if (navigate) {
       navigate("/");
     }
   };
-
+  //로그인
   const navigateLogin = () => {
     navigate("/login")
   };
-
+  //상품페이지
   const navigateProductList = () => {
     navigate("/products")
   };
+
+  //alert 구현
+  let [alert, setAlert] = useState(true)
+  // 재랜더링 마다 코드 실행
+  useEffect(() => {
+    let a = setTimeout(() => { setAlert(false) }, 10000)
+    // mout시 실행안됨, unmout시 실행됨
+    return () => {
+      clearTimeout(a)
+    }
+  }, [])
 
   return (
     <NavComponent>
@@ -39,17 +51,23 @@ const Nav = () => {
         <div className="nav-menu2">
           <ul>
 
-            <li onClick={navigateEmpty}>
+            <li onClick={navigateCart}>
               장바구니
             </li>
             <li onClick={navigateLogin}>로그인</li>
-
-            <li onClick={navigateEmpty}>장바구니</li>
-            <li>로그인</li>
             <li>회원가입</li>
             <li>고객센터</li>
           </ul>
         </div>
+      </div>
+      <div className="nav-footer">
+        {
+          alert === true
+            ? <div className="alert" >
+              5시간 이내 구매시 할인
+            </div>
+            : null
+        }
       </div>
     </NavComponent>
   );
@@ -112,6 +130,18 @@ const NavComponent = styled.div`
     background-image: linear-gradient(transparent 60%, #6eb636 40%);
     background-size: 100% 100%;
   }
+  
+  .alert {
+    background-color: gray;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
 
   /* 768 반응형 */
   @media (max-width: 768px) {
