@@ -8,16 +8,22 @@ import Empty from "./Components/Basket/Empty";
 import Login from "./Components/Login/Login";
 import BestProductList from "./Components/BestProducts/BestProductList";
 
+
 function App() {
   return (
     <Router>
       <div className="App">
         <Nav />
         <Routes>
+
           <Route path="/" element={<MainPage />} />
           <Route path='/empty' element={<Empty />} />
           <Route path='/login' element={<Login />} />
           <Route path='/products' element={<BestProductList />} />
+
+          <Route path="/" element={<MainPage/>} />
+          <Route path='/empty' element={<Empty />} />z
+
         </Routes>
         <Footer />
       </div>
