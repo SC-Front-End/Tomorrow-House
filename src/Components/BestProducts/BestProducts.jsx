@@ -26,14 +26,14 @@ const BestProducts = (props) => {
 
             case "최다클릭순":
                 // 최다클릭순으로 정렬
-                return itemsCopy.sort((a, b) => b.view_count - a.view_count);
+                return itemsCopy.sort((a, b) => b.viewCnt - a.viewCnt);
 
             case "가격낮은순":
                 // 가격낮은순으로 정렬
-                return itemsCopy.sort((a, b) => a.unit_price - b.unit_price);
+                return itemsCopy.sort((a, b) => a.unitPrice - b.unitPrice);
             case "가격높은순":
                 // 가격높은순으로 정렬
-                return itemsCopy.sort((a, b) => b.unit_price - a.unit_price);
+                return itemsCopy.sort((a, b) => b.unitPrice - a.unitPrice);
 
             default:
                 // 기본 역대베스트로 정렬
@@ -45,7 +45,7 @@ const BestProducts = (props) => {
 
 
 
-
+//      key={index}
     return (
         <>
             <Box>
@@ -53,17 +53,14 @@ const BestProducts = (props) => {
                 <List>
                     {sortItems().map((bestitem, index) => (
                         <ProductGrid
-                            key={index}
-                            rank={index + 1} // 순위 값 전달 임의로 넣은거임 삭제해야함
-                            item_code={bestitem.bestitem_code}
-                            option_code={bestitem.option_code}
-                            item_title={bestitem.item_title}
-                            unit_price={bestitem.unit_price}
-                            stock_quantity={bestitem.stock_quantity}
-                            image_path_1={bestitem.image_path_1}
-                            view_count={bestitem.view_count}
-                            start_date={bestitem.start_date}
-                            end_date={bestitem.end_date}
+                      
+                            postId={index + 1}
+                            itemId={bestitem.itemId}
+                            sellerUserId={bestitem.sellerUserId}
+                            title={bestitem.title}
+                            content={bestitem.content}
+                            unitPrice={bestitem.unitPrice}
+                            thumbNailImgPath={bestitem.thumbNailImgPath}
                         />
                     ))}
                 </List>

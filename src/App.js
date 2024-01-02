@@ -5,13 +5,14 @@ import Nav from './Components/MainPage/Nav';
 import Footer from './Components/MainPage/Footer';
 import Empty from "./Components/Basket/Empty";
 
+
 function App() {
   return (
     <Router>
       <div className="App">
         <Nav />
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage/>} />
           <Route path='/empty' element={<Empty />} />z
         </Routes>
         <Footer />
