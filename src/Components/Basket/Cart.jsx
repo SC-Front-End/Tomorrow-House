@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { addCount } from './store';
 
 const Cart = () => {
 
-    let a = useSelector((state) => { return state })
+    let dispatch = useDispatch();
+    let state = useSelector((state) => state);
 
     return (
         <Table>
@@ -19,12 +20,20 @@ const Cart = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>안녕</td>
-                        <td>안녕</td>
-                        <td>안녕</td>
-                    </tr>
+                    {
+                        state.cart.map((a, i) =>
+                            <tr key={i}>
+                                <td>1</td>
+                                <td>{state.cart[i].name}</td>
+                                <td>{state.cart[i].count}</td>
+                                <td>
+                                    <button onClick={() => {
+                                        dispatch(addCount(i))
+                                    }}>+</button>
+                                </td>
+                            </tr>
+                        )
+                    }
                 </tbody>
             </div>
         </Table>
