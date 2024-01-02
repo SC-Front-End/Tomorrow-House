@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import data from "./data";
+import { addItem } from '../Basket/store';
+import { useDispatch } from "react-redux";
 
 const BestSale = () => {
 
   let [products] = useState(data)
+  let dispatch = useDispatch()
 
   return (
     <SaleSection>
@@ -22,6 +25,12 @@ const BestSale = () => {
             <div className="item-btn">
               <button className="free-btn">할인 쿠폰</button>
               <button className="big-btn">특가</button>
+              <button className='big-btn'
+                onClick={() => {
+                  dispatch(addItem({ id: 2, name: 'gray yordan', count: 1 }))
+                }}>
+                주문하기
+              </button>
             </div>
           </li>
           <li className="item-img">
