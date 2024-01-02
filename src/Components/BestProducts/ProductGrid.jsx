@@ -25,13 +25,13 @@ const Link = styled.a`
 `;
 const Wrapper = styled.div`
   display: block;
-  position: relative; 
+  position: relative;
   overflow: hidden;  
 
   @media (max-width: 768px){
   display: block;
-  position: relative; 
-  overflow: hidden; 
+  position: relative;
+  overflow: hidden;
   }
 
 `;
@@ -119,7 +119,7 @@ const RankIcon = styled.div`
   background-color: #35C5F0;
   color: #fff;
   padding: 10px;
-  border-radius: 8px;   
+  border-radius: 8px;  
   font-size: 1rem;
   font-weight: 700;
    /* 다른 요소보다 위에 나타나도록 설정 */
@@ -138,7 +138,7 @@ const FreeShippingIcon = styled.div`
   background-color: #EEEEEE;
   color: #000000;
   padding: 10px 20px;
-  border-radius: 8px;   
+  border-radius: 8px;  
   font-size: 0.8rem;
   font-weight: 700;
 
@@ -146,7 +146,7 @@ const FreeShippingIcon = styled.div`
   background-color: #EEEEEE;
   color: #000000;
   padding: 1px 2px;
-  border-radius: 8px;   
+  border-radius: 8px;  
   font-size: 10px;
   font-weight: 700;
 }
@@ -157,7 +157,7 @@ const SpecialPriceIcon = styled.div`
   background-color: #E87C6C;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 8px;   
+  border-radius: 8px;  
   font-size: 0.8rem;
   font-weight: 700;
   flex-direction: row;
@@ -167,7 +167,7 @@ const SpecialPriceIcon = styled.div`
   background-color: #E87C6C;
   color: #fff;
   padding: 1px 2px;
-  border-radius: 8px;   
+  border-radius: 8px;  
   font-size: 10px;
   font-weight: 700;
   flex-direction: row;
@@ -186,11 +186,11 @@ const ProductGrid = (props) => {
         <Link>
           <Wrapper>
             <RankIcon>{props.rank}</RankIcon>
-            <Img src={props.image_path_1} />
-            <Title>{props.name}</Title>
-            <SubInfo>{props.item_title}</SubInfo>
+            <Img src={props.thumbNailImgPath} />
+            <Title>{props.title}</Title>
+            <SubInfo>{props.content}</SubInfo>
             <SubInfo>확인중</SubInfo>
-            <Price>{props.unit_price}원</Price>
+            <Price>{props.unitPrice}원</Price>
             <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
           </Wrapper>
         </Link>
