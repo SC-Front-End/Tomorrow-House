@@ -36,9 +36,13 @@ const BestProductList = () => {
 
     return (
         <>
+
+            <BestProducts items={bestProducts_data} />
+
             <Nav/>
             <BestProducts items={bestProducts} />
             <Footer />
+
         </>
     );
 };

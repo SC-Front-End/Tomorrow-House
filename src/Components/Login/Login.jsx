@@ -9,11 +9,11 @@ import titlepic from "./assets/titlepic.png";
 
 const UserLogin = styled.div`
   .user-login-main {
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .user-login {
     padding: 15px;
