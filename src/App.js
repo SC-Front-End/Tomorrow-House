@@ -7,6 +7,7 @@ import Footer from './Components/MainPage/Footer';
 import Login from "./Components/Login/Login";
 import BestProductList from "./Components/BestProducts/BestProductList";
 import Cart from "./Components/Basket/Cart";
+import PaymentDetailGuide from "./Components/Payment/PaymentDetailGuide";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
           <Route path='/products' element={<BestProductList />} />
+          <Route path='/payment' element={<PaymentDetailGuide />} />
         </Routes>
         <Footer />
       </div>

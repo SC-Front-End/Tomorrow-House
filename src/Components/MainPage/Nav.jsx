@@ -132,11 +132,11 @@ const NavComponent = styled.div`
   }
   
   .alert {
-    background-color: gray;
+    background-color: #ece6cc;
     width: 100%;
     height: 10px;
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 20px;
