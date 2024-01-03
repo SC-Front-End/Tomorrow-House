@@ -1,13 +1,12 @@
-const { createProxyMiddleware } = require("http-proxy-middleware");
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-module.exports = function (app) {
+module.exports = function(app) {
   app.use(
-    createProxyMiddleware("/api", {
-        target: "http://localhost:8080",
+    '/api',
+    createProxyMiddleware({
+      target: 'http://mini.jh1105.xyz:5305',
       changeOrigin: true,
- 
     })
   );
 };
-
 //     withCredentials: true,  // 자격 증명을 요청에 포함

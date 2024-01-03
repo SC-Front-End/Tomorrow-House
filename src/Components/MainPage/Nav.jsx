@@ -22,8 +22,12 @@ const Nav = () => {
     navigate("/login")
   };
   //베스트상품페이지
-  const navigateProductList = () => {
+  const navigateProducts = () => {
     navigate("/products")
+  };
+  //상품목록페이지
+  const navigateProductList = () =>{
+    navigate("/productList/1")
   };
 
   //alert 구현
@@ -45,8 +49,8 @@ const Nav = () => {
         </div>
         <ul className="menu-text">
           <li>커뮤니티</li>
-          <li>쇼핑</li>
-          <li onClick={navigateProductList}>베스트샵</li>
+          <li onClick={navigateProductList}>쇼핑</li>
+          <li onClick={navigateProducts}>베스트샵</li>
         </ul>
         <div className="nav-menu2">
           <ul>
