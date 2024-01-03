@@ -3,7 +3,7 @@ import axios from 'axios';
 export async function getApiList(pageParam, categoryIdParam, sizeParam) {
     try {
         console.log(pageParam,categoryIdParam,sizeParam);
-        const response = await axios.get(`/api/post/category/`, {
+        const response = await axios.get(`http://mini.jh1105.xyz:5305/api/post/category/`, {
             params: {categoryId: categoryIdParam, page: pageParam, size: sizeParam }
         });
         const { content, last, totalElements, totalPages } = response.data;

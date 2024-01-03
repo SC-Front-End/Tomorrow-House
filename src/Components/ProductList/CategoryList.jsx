@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router';
 import Skeleton from '../../shared/Skeleton';
 
 const CategoryList = ({ categoryId }) => {
-    const categoryList = [
-        {name: '가구', id: 1},
-        {name: '페브릭', id: 2},
-        {name: '주방', id: 3},
-        {name: '생활/수납', id: 4},
-        {name: '홈 데코', id: 5},
-      ];
+  const categoryList = [
+    {name: '가구', id: 1},
+    {name: '페브릭', id: 2},
+    {name: '주방', id: 3},
+    {name: '생활/수납', id: 4},
+    {name: '홈 데코', id: 5},
+    {name: '조명', id: 6},
+  ];
       const navigate = useNavigate();
       const [selectedCategoryId, setSelectedCategoryId] = useState(categoryId);
       const [sortedCategoryList, setSortedCategoryList] = useState(categoryList);
