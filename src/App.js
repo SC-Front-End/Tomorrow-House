@@ -7,11 +7,11 @@ import Footer from "./Components/MainPage/Footer";
 import Login from "./Components/Login/Login";
 import BestProductList from "./Components/BestProducts/BestProductList";
 import Cart from "./Components/Basket/Cart";
-import Admin from "./Components/Admin/Admin";
+import AdminMain from "./Components/Admin/AdminMain/Admin";
+import AddProduct from "./Components/Admin/AddProduct/AddProduct";
 import PaymentDetailGuide from "./Components/Payment/PaymentDetailGuide";
 import ProductList from "./Components/ProductList/ProductList";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
-
 
 function App() {
   return (
@@ -23,13 +23,14 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/products" element={<BestProductList />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/products' element={<BestProductList />} />
-          <Route path='/payment' element={<PaymentDetailGuide />} />
-          <Route path='/productList/:categoryId' element={<ProductList />} />
-          <Route path='/productDetail/:productId' element={<ProductDetail />} />
+          <Route path="/admin" element={<AdminMain />} />
+          <Route path="/admin/addproduct" element={<AddProduct />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/products" element={<BestProductList />} />
+          <Route path="/payment" element={<PaymentDetailGuide />} />
+          <Route path="/productList/:categoryId" element={<ProductList />} />
+          <Route path="/productDetail/:productId" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>
