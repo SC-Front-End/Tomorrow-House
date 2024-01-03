@@ -21,7 +21,7 @@ const Nav = () => {
   const navigateLogin = () => {
     navigate("/login")
   };
-  //상품페이지
+  //베스트상품페이지
   const navigateProductList = () => {
     navigate("/products")
   };
@@ -45,8 +45,8 @@ const Nav = () => {
         </div>
         <ul className="menu-text">
           <li>커뮤니티</li>
-          <li onClick={navigateProductList}>쇼핑</li>
-          <li>베스트샵</li>
+          <li>쇼핑</li>
+          <li onClick={navigateProductList}>베스트샵</li>
         </ul>
         <div className="nav-menu2">
           <ul>
