@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { useNavigate } from "react-router";
 const fontFamily = "맑은 고딕";
 
 
@@ -180,9 +180,16 @@ const SpecialPriceIcon = styled.div`
 
 const ProductGrid = (props) => {
 
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    // 클릭 시 동적으로 URL 생성하여 페이지 이동
+    navigate(`/productDetail/${props.itemId}`);
+  };
+
   return (
     <>
-      <Cardbox>
+      <Cardbox onClick={handleCardClick}>
         <Link>
           <Wrapper>
             <RankIcon>{props.postId}</RankIcon>

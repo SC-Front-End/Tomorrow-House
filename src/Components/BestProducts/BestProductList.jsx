@@ -12,7 +12,7 @@ const BestProductList = () => {
     useEffect(() => {
         const fetchDataFromSpring = async () => {
             try {
-                const response = await axios.get('http://mini.jh1105.xyz:5305/api/post/normal/?page=0&size=10');
+                const response = await axios.get('http://34.192.1.4:8080/api/post/normal/?page=0&size=10');
                 setBestProducts(response.data.content);   //아 이게 원인임.
             } catch (error) {
                 console.error('Error fetching data from Spring:', error);
