@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import OptionInput from "./component/OptionInput";
 import { Cookies } from "react-cookie";
-import { Board, Button } from "../UI/ui";
+import { Board, Button, Input, Ul, Span } from "../UI/ui";
 import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
@@ -117,18 +117,18 @@ const AddProduct = () => {
     <Board>
       <div id="container">
         <h2>상품추가</h2>
-        <ul>
+        <Ul>
           <li>
             <label htmlFor="title">
               제목
-              <input
+              <Input
                 id="title"
                 onChange={(e) => {
                   setTitle("title", e.target.value);
                 }}
               />
             </label>
-            <input
+            <Input
               style={{ width: "20px" }}
               type="checkbox"
               onChange={(e) => {
@@ -136,16 +136,16 @@ const AddProduct = () => {
                   setTitle("");
                 }
               }}
-            ></input>
+            ></Input>
           </li>
           <li>
             <label htmlFor="content">
               내용
-              <input
+              <Input
                 id="content"
                 onChange={(e) => setContent(e.target.value)}
               />
-              <input
+              <Input
                 style={{ width: "20px" }}
                 type="checkbox"
                 onChange={(e) => {
@@ -153,18 +153,18 @@ const AddProduct = () => {
                     setContent("");
                   }
                 }}
-              ></input>
+              ></Input>
             </label>
           </li>
-        </ul>
-        <ul>
+        </Ul>
+        <Ul>
           <div id="box">
-            <span>상품 정보</span>
+            <Span>상품 정보</Span>
           </div>
           <li>
             <label htmlFor="email">
               계정
-              <input
+              <Input
                 id="email"
                 onChange={(e) => changeDataFn("email", e.target.value)}
               />
@@ -173,7 +173,7 @@ const AddProduct = () => {
           <li>
             <label htmlFor="categoryId">
               카테고리
-              <input
+              <Input
                 id="categoryid"
                 onChange={(e) => changeDataFn("categoryId", e.target.value)}
               />
@@ -182,7 +182,7 @@ const AddProduct = () => {
           <li>
             <label htmlFor="itemName">
               상품명
-              <input
+              <Input
                 id="itemName"
                 onChange={(e) => changeDataFn("itemName", e.target.value)}
               />
@@ -191,7 +191,7 @@ const AddProduct = () => {
           <li>
             <label htmlFor="description">
               설명
-              <input
+              <Input
                 id="description"
                 onChange={(e) => changeDataFn("description", e.target.value)}
               />
@@ -200,17 +200,17 @@ const AddProduct = () => {
           <li>
             <label htmlFor="unitPrice">
               개당 가격
-              <input
+              <Input
                 id="unitPrice"
                 onChange={(e) => changeDataFn("unitprice", e.target.value)}
               />
             </label>
           </li>
-        </ul>
-        <ul>
+        </Ul>
+        <Ul>
           <div id="box">
-            <span>상품옵션</span>
-            <input
+            <Span>상품옵션</Span>
+            <Input
               style={{ width: "20px" }}
               type="checkbox"
               onChange={(e) => {
@@ -218,7 +218,7 @@ const AddProduct = () => {
                   setOption([{ content: null, addprice: 0 }]);
                 }
               }}
-            ></input>
+            ></Input>
           </div>
           <li id="option">
             {option.map((data, i) => {
@@ -233,11 +233,11 @@ const AddProduct = () => {
               );
             })}
           </li>
-        </ul>
-        <ul>
+        </Ul>
+        <Ul>
           <div id="box">
-            <span>상품재고</span>
-            <input
+            <Span>상품재고</Span>
+            <Input
               style={{ width: "20px" }}
               type="checkbox"
               onChange={(e) => {
@@ -252,7 +252,7 @@ const AddProduct = () => {
                   ]);
                 }
               }}
-            ></input>
+            ></Input>
           </div>
           <li>
             {stock.map((data, i) => {
@@ -267,12 +267,12 @@ const AddProduct = () => {
               );
             })}
           </li>
-        </ul>
-        <ul>
+        </Ul>
+        <Ul>
           <li>
             <div id="box">
-              <span>대표이미지</span>
-              <input
+              <Span>대표이미지</Span>
+              <Input
                 style={{ width: "20px" }}
                 type="checkbox"
                 onChange={(e) => {
@@ -280,17 +280,17 @@ const AddProduct = () => {
                     setImg(null);
                   }
                 }}
-              ></input>
+              ></Input>
             </div>
             <div>
-              <input
+              <Input
                 type="file"
                 accept="image/*"
                 style={{ width: "300px", borderRadius: "10px", padding: "5px" }}
               />
             </div>
           </li>
-        </ul>
+        </Ul>
         <div>
           <Button
             onClick={() => {

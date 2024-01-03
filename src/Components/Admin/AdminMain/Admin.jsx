@@ -3,7 +3,12 @@ import styled from "styled-components";
 import DashBoard from "./components/DashBoard";
 import ProductList from "./components/ProductList";
 import AddButton from "./components/AddButton";
+import { Cookies } from "react-cookie";
+import axios from "axios";
+
 const AdminMain = () => {
+  const cookie = new Cookies();
+
   useEffect(() => {
     const getItemList = async () => {
       const basicURL =
@@ -26,7 +31,6 @@ const AdminMain = () => {
       } catch (error) {
         console.error("데이터 전송 중 예기치 못한 에러가 발생했습니다.", error);
       }
-      getItemList;
     };
   });
   return (
