@@ -28,9 +28,10 @@ const ProductList = (dbData) => {
       })}
       
       */}
-      {itemList.map((item) => {
+      {itemList.map((item, i) => {
         return (
           <Products
+            key={i}
             data={[item.num, item.name, item.price, item.quantity]}
             onclick={"on"}
           ></Products>

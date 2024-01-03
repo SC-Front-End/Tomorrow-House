@@ -3,7 +3,12 @@ import styled from "styled-components";
 import DashBoard from "./components/DashBoard";
 import ProductList from "./components/ProductList";
 import AddButton from "./components/AddButton";
+import { Cookies } from "react-cookie";
+import axios from "axios";
+
 const AdminMain = () => {
+  const cookie = new Cookies();
+
   useEffect(() => {
     const getItemList = async () => {
       const basicURL =
