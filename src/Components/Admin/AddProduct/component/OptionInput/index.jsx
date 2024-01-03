@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input, ButtonVer2 } from "../../../UI/ui";
 import "./style.css";
 
 const OptionInput = ({ optionName, optionnum, addIOption, changeOptionFn }) => {
@@ -19,23 +20,23 @@ const itemOptionInput = (optionnum, addIOption, changeOptionFn) => {
     <div>
       <label htmlFor={`content${optionnum}`}>
         옵션
-        <input
+        <Input
           id={`content${optionnum}`}
           onChange={(e) =>
             changeOptionFn("item", "content", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
       <label htmlFor={`addprice${optionnum}`}>
         추가금액
-        <input
+        <Input
           id={`addprice${optionnum}`}
           onChange={(e) =>
             changeOptionFn("item", "addprice", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
-      <button
+      <ButtonVer2
         onClick={() => {
           itemoptioncount += 1;
           optionnum = itemoptioncount;
@@ -43,7 +44,7 @@ const itemOptionInput = (optionnum, addIOption, changeOptionFn) => {
         }}
       >
         추가
-      </button>
+      </ButtonVer2>
     </div>
   );
 };
@@ -57,41 +58,41 @@ const stockOptionInput = (optionnum, addIOption, changeOptionFn) => {
     <div>
       <label htmlFor={`quantity${optionnum}`}>
         옵션
-        <input
+        <Input
           id={`quantity${optionnum}`}
           onChange={(e) =>
             changeOptionFn("stock", "quantity", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
       <label htmlFor={`itemStatus${optionnum}`}>
         추가금액
-        <input
+        <Input
           id={`itemStatus${optionnum}`}
           onChange={(e) =>
             changeOptionFn("stock", "itemStatus", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
       <label htmlFor={`startdate${optionnum}`}>
         From
-        <input
+        <Input
           id={`startdate${optionnum}`}
           onChange={(e) =>
             changeOptionFn("stock", "startdate", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
       <label htmlFor={`enddate${optionnum}`}>
         To
-        <input
+        <Input
           id={`enddate${optionnum}`}
           onChange={(e) =>
             changeOptionFn("stock", "enddate", optionnum, e.target.value)
           }
-        />
+        ></Input>
       </label>
-      <button
+      <ButtonVer2
         onClick={() => {
           stockOptionCount += 1;
           optionnum = stockOptionCount;
@@ -99,7 +100,7 @@ const stockOptionInput = (optionnum, addIOption, changeOptionFn) => {
         }}
       >
         추가
-      </button>
+      </ButtonVer2>
     </div>
   );
 };

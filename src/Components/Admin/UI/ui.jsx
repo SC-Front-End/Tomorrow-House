@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export { Board, Wrapper, Button };
+export { Board, Wrapper, Button, ButtonVer2, Input, Ul, Span };
 
 const Board = styled.div`
   background-color: #e9f4e1;
@@ -30,4 +30,49 @@ const Button = styled.button`
     background-color: #6eb636;
     color: white;
   }
+`;
+const Input = styled.input`
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  height: 20px;
+  width: 30%;
+  margin: 10px;
+  transition: all 0.6s;
+
+  &:focus {
+    background-color: rgba(109, 207, 136, 0.3);
+    outline: none;
+  }
+  &:hover {
+    background-color: rgba(109, 207, 136, 0.8);
+    outline: none;
+  }
+`;
+
+const Ul = styled.ul`
+background-color: rgba(255, 255, 255, 0.3);
+border: 1px solid green;
+padding: 20px;
+border-radius: 30px;
+width: 85%;
+}
+`;
+const ButtonVer2 = styled.button`
+  background-color: rgba(3, 67, 21, 0.9);
+  color: #fff;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border-radius: 4px;
+  transition: all 0.6s;
+
+  &:hover {
+    padding: 8px 14px;
+  }
+`;
+
+const Span = styled.span`
+  font-size: 17px;
+  font-weight: bolder;
+  color: rgba(3, 67, 21, 0.9);
 `;
