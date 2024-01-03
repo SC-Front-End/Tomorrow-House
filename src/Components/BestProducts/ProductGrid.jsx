@@ -185,11 +185,10 @@ const ProductGrid = (props) => {
       <Cardbox>
         <Link>
           <Wrapper>
-            <RankIcon>{props.rank}</RankIcon>
+            <RankIcon>{props.postId}</RankIcon>
             <Img src={props.thumbNailImgPath} />
             <Title>{props.title}</Title>
             <SubInfo>{props.content}</SubInfo>
-            <SubInfo>확인중</SubInfo>
             <Price>{props.unitPrice}원</Price>
             <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
           </Wrapper>

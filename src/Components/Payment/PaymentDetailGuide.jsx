@@ -1,17 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import Nav from '../MainPage/Nav';
-import Footer from '../MainPage/Footer';
+import { useNavigate } from 'react-router';
 
 const PaymentDetailGuide = () => {
+
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        // '/cart' 경로로 이동
+        navigate('/cart');
+    };
+
     return (
         <>
-            <Nav/>
             <PaymentDetailGuideWrapper>
                 <PaymentIsFinishedImg src="https://www.codemshop.com/manual/wp-content/uploads/2022/11/%E1%84%80%E1%85%A7%E1%86%AF%E1%84%8C%E1%85%A6%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%85%E1%85%AD.png" />
-                <PaymentDetailGuideButton>주문현황 보기</PaymentDetailGuideButton>
+                <PaymentDetailGuideButton  onClick={handleButtonClick}>주문현황 보기</PaymentDetailGuideButton>
             </PaymentDetailGuideWrapper>
-            <Footer/>
         </>
     );
 };
@@ -47,5 +52,6 @@ const PaymentDetailGuideButton = styled.button`
     font-size: 30px;
     border: none;
     margin: 50px 20px;
+    cursor: pointer;
 `
 
