@@ -106,7 +106,6 @@ const SaleSection = styled.div`
 
   img {
     width: 280px;
-
     border-radius: 10px;
   }
 

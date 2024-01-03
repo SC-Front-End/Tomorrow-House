@@ -17,7 +17,7 @@ const BestProductList = () => {
             try {
                 const response = await axios.get('http://mini.jh1105.xyz:5305/api/post/normal/?page=0&size=10');
                 setBestProducts(response.data.content);   //아 이게 원인임.
-                console.log('불러왔나요?',response.data);
+                console.log('불러왔나요?', response.data);
                 console.log('bestProducts 체크 첫번째 유즈에펙트안임', bestProducts);
             } catch (error) {
                 console.error('Error fetching data from Spring:', error);
@@ -30,7 +30,7 @@ const BestProductList = () => {
 
     //test중
     useEffect(() => {
-       
+
         console.log('bestProducts 체크 useEffect', bestProducts);
     }, [bestProducts]);
 
@@ -39,7 +39,7 @@ const BestProductList = () => {
 
             <BestProducts items={bestProducts_data} />
 
-            <Nav/>
+            <Nav />
             <BestProducts items={bestProducts} />
             <Footer />
 
