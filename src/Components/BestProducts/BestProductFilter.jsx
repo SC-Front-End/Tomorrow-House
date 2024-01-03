@@ -42,17 +42,29 @@ const FilterControl = styled.div`
 `;
 
 
-
+// background-color: white;
 const FilterButton =styled.button`
     font: inherit;
     font-Size: 1rem;
     margin: 0rem 0.3rem;
     padding: 0.5rem 0.6rem 0.5rem 0.5rem;
-    border:none;
     text-align: right;
-    background-color: white;
     font-weight: 500;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    /*스타일 */
+  
+    border: 2px solid #35C5F0;
+    background-color: #35C5F0;
+    border-radius: 20px;
+    color: #fff;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 8px 8px #8ee1fa;
+        transition: 0.3s;
+    }
+     /*스타일 */
 
 
     @media (max-width: 768px){
@@ -65,10 +77,12 @@ const FilterButton =styled.button`
     background-color: white;
     font-weight: 500;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
     
 }
 `
+
 
 
 
