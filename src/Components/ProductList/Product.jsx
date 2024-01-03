@@ -17,6 +17,7 @@ const Product = (props) => {
                     <ImgContainer><Img src={props.src} /></ImgContainer>
                     <Title>{props.name}</Title>
                     <Price>{props.price}원</Price>
+                    <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
                 </Wrapper>
         </Container>
     );
@@ -77,9 +78,7 @@ const Title = styled.div`
     font-Family: 맑은 고딕;
     font-Weight: 900;
 `;
-const Content = styled.div`
-    display: block;
-`;
+
 const Price = styled.div`
     font-size: 16px;
     margin-top:15px;
@@ -87,4 +86,35 @@ const Price = styled.div`
     line-Height: 1.75;
     font-Family: 맑은 고딕;
     font-Weight: 900;
+`;
+
+const IconWrapper = styled.div`
+  top: 90px;
+  display: flex;
+  align-items: center;
+  width: 258px;
+  margin-top:10px;
+`;
+
+const FreeShippingIcon = styled.div`
+  background-color: #EEEEEE;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 8px;  
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+`;
+
+const SpecialPriceIcon = styled.div`
+  margin-left: 10px;
+  background-color: #E87C6C;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;  
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-direction: row;
+
+}
 `;

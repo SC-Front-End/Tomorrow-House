@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 import axios from 'axios';
 import ScrollToTopButton from '../ProductList/ScrollToTopButton';
 
@@ -14,7 +15,7 @@ const ProductDetail = () => {
       const fetchProductDetail = async () => {
           try {
               console.log("productId",productId);
-              const response = await axios.get(`/api/post/${productId}`);
+              const response = await axios.get(`http://mini.jh1105.xyz:5305/api/post/${productId}`);
               setProductDetail(response.data);
               console.log("데이터",response.data)
           } catch (error) {
@@ -39,7 +40,7 @@ const ProductDetail = () => {
   
     const productTitle = productDetail ? productDetail.itemName : "제품 정보 로딩 중...";
     const productPrice = productDetail ? productDetail.unitPrice : 0;
-    const productImg = productDetail ? productDetail.thumbNailImgPath : "https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703721600&semt=ais";
+    const productImg = productDetail ? productDetail.thumbNailImgPath : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1W_MG7qY-hvsjhCYeSpIAiyFnsY-XXGryhRcMzzZlmY2Ac78SGV06RbrzSQ&s";
     const totalPrice = (productPrice + selectedOptionPrice) * quantity;
     
   

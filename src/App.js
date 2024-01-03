@@ -9,6 +9,7 @@ import BestProductList from "./Components/BestProducts/BestProductList";
 import Cart from "./Components/Basket/Cart";
 import PaymentDetailGuide from "./Components/Payment/PaymentDetailGuide";
 import ProductList from "./Components/ProductList/ProductList";
+import ProductDetail from "./Components/ProductDetail/ProductDetail";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/products' element={<BestProductList />} />
           <Route path='/payment' element={<PaymentDetailGuide />} />
           <Route path='/productList/:categoryId' element={<ProductList />} />
+          <Route path='/productDetail/:productId' element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>
