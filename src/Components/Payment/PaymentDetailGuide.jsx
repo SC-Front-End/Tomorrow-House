@@ -52,5 +52,6 @@ const PaymentDetailGuideButton = styled.button`
     font-size: 30px;
     border: none;
     margin: 50px 20px;
+    cursor: pointer;
 `
 

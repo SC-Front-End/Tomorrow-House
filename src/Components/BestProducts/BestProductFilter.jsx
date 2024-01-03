@@ -47,9 +47,9 @@ const FilterButton =styled.button`
     font: inherit;
     font-Size: 1rem;
     margin: 0rem 0.3rem;
-    padding: 0.5rem 0.6rem 0.5rem 0.5rem;
+    padding: 0.8rem 0.9rem 0.8rem 0.9rem;
     text-align: right;
-    font-weight: 500;
+    font-weight: 550;
     cursor: pointer;
 
     /*스타일 */
