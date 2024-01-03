@@ -15,7 +15,7 @@ const ProductDetail = () => {
       const fetchProductDetail = async () => {
           try {
               console.log("productId",productId);
-              const response = await axios.get(`http://mini.jh1105.xyz:5305/api/post/${productId}`);
+              const response = await axios.get(`http://34.192.1.4:8080/api/post/${productId}`);
               setProductDetail(response.data);
               console.log("데이터",response.data)
           } catch (error) {
@@ -115,7 +115,7 @@ const ProductDetail = () => {
 export default ProductDetail;
 
 
-const themeColor = '#008000';
+const themeColor = '#6eb636';
 const fontBlack = '#000000';
 const lightGray = 'lightgray';
 
