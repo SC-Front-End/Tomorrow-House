@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 const fontFamily = "맑은 고딕";
 
 
-const ProductGrid = (props) => {
+const ProductGrid = ({ itemId, postId, thumbNailImgPath, title, content, unitPrice }) => {
 
   const navigate = useNavigate();
 
@@ -16,11 +16,11 @@ const ProductGrid = (props) => {
       <Cardbox onClick={handleCardClick}>
         <Link>
           <Wrapper>
-            <RankIcon>{props.postId}</RankIcon>
-            <Img src={props.thumbNailImgPath} />
-            <Title>{props.title}</Title>
-            <SubInfo>{props.content}</SubInfo>
-            <Price>{props.unitPrice}원</Price>
+            <RankIcon>{postId}</RankIcon>
+            <Img src={thumbNailImgPath} />
+            <Title>{title}</Title>
+            <SubInfo>{content}</SubInfo>
+            <Price>{unitPrice}원</Price>
             <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
           </Wrapper>
         </Link>
