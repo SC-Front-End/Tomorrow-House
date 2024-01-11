@@ -23,7 +23,7 @@ const Nav = () => {
   };
   //베스트상품페이지
   const navigateProducts = () => {
-    navigate("/products")
+    navigate("/bestproducts")
   };
   //상품목록페이지
   const navigateProductList = () =>{

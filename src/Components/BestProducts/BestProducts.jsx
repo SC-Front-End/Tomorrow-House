@@ -21,18 +21,15 @@ const BestProducts = (props) => {
 
         switch (filtered) {
             case "역대베스트":
-                // 역대베스트로 정렬 (기본 순서는 판매량 순서) 추후 로직 수정해야함
+                // TODO: 역대베스트로 정렬 (기본 순서는 판매량 순서) 추후 로직 수정해야함
                 return itemsCopy;
 
             case "최다클릭순":
-                // 최다클릭순으로 정렬
                 return itemsCopy.sort((a, b) => b.viewCnt - a.viewCnt);
 
             case "가격낮은순":
-                // 가격낮은순으로 정렬
                 return itemsCopy.sort((a, b) => a.unitPrice - b.unitPrice);
             case "가격높은순":
-                // 가격높은순으로 정렬
                 return itemsCopy.sort((a, b) => b.unitPrice - a.unitPrice);
 
             default:
@@ -43,9 +40,6 @@ const BestProducts = (props) => {
 
 
 
-
-
-//      key={index}
     return (
         <>
             <Box>
@@ -53,7 +47,6 @@ const BestProducts = (props) => {
                 <List>
                     {sortItems().map((bestitem, index) => (
                         <ProductGrid
-                      
                             postId={index + 1}
                             itemId={bestitem.itemId}
                             sellerUserId={bestitem.sellerUserId}

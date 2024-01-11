@@ -3,6 +3,34 @@ import { useNavigate } from "react-router";
 const fontFamily = "맑은 고딕";
 
 
+const ProductGrid = (props) => {
+
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/productDetail/${props.itemId}`);
+  };
+
+  return (
+    <>
+      <Cardbox onClick={handleCardClick}>
+        <Link>
+          <Wrapper>
+            <RankIcon>{props.postId}</RankIcon>
+            <Img src={props.thumbNailImgPath} />
+            <Title>{props.title}</Title>
+            <SubInfo>{props.content}</SubInfo>
+            <Price>{props.unitPrice}원</Price>
+            <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
+          </Wrapper>
+        </Link>
+      </Cardbox>
+    </>
+  );
+}
+
+export default ProductGrid;
+
 const Cardbox = styled.div`
   width: calc(25% - 25px);
   padding: 40px 10px;
@@ -173,36 +201,3 @@ const SpecialPriceIcon = styled.div`
   flex-direction: row;
 }
 `;
-
-
-//UI부분
-
-
-const ProductGrid = (props) => {
-
-  const navigate = useNavigate();
-
-  const handleCardClick = () => {
-    // 클릭 시 동적으로 URL 생성하여 페이지 이동
-    navigate(`/productDetail/${props.itemId}`);
-  };
-
-  return (
-    <>
-      <Cardbox onClick={handleCardClick}>
-        <Link>
-          <Wrapper>
-            <RankIcon>{props.postId}</RankIcon>
-            <Img src={props.thumbNailImgPath} />
-            <Title>{props.title}</Title>
-            <SubInfo>{props.content}</SubInfo>
-            <Price>{props.unitPrice}원</Price>
-            <IconWrapper><FreeShippingIcon>무료배송</FreeShippingIcon><SpecialPriceIcon>특가</SpecialPriceIcon></IconWrapper>
-          </Wrapper>
-        </Link>
-      </Cardbox>
-    </>
-  );
-}
-
-export default ProductGrid;
