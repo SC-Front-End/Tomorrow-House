@@ -9,16 +9,18 @@ import axios from "axios";
 const AdminMain = () => {
   const cookie = new Cookies();
 
+  //"http://mini.jh1105.xyz:5305/api/post/seller-page/?page=0&size=30"
+  //http://34.192.1.4:8080/api/post/seller-page/?page=0&size=30
   useEffect(() => {
     const getItemList = async () => {
       const basicURL =
-        "http://mini.jh1105.xyz:5305/api/post/seller-page/?page=0&size=30";
+        "http://34.192.1.4:8080/api/post/seller-page/?page=0&size=30";
       const token = cookie.token;
 
       // JSON 데이터를 서버로 전송
       try {
         const response = await axios.get(
-          "http://mini.jh1105.xyz:5305/api/post/seller-page/?page=0&size=30"
+          "http://34.192.1.4:8080/api/post/seller-page/?page=0&size=30"
         );
 
         if (response.status === 200) {
