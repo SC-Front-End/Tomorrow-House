@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { useNavigate } from 'react-router';
-import Skeleton from '../../shared/Skeleton';
+import Skeleton from '../../Shared/Skeleton';
 
 const CategoryList = ({ categoryId }) => {
   const categoryList = [

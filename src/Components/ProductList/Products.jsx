@@ -4,7 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { flatten } from 'lodash';
 import styled from "styled-components"
 import Product from './Product';
-import { getApiList } from '../../remote/api';
+import { getApiList } from '../../Remote/api';
 import ProductsFilter from './ProductsFilter';
 import ScrollToTopButton from './ScrollToTopButton';
 

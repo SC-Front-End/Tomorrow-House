@@ -15,3 +15,13 @@ export async function getApiList(pageParam, categoryIdParam, sizeParam) {
         throw error;
     }
 }
+
+export const getBestApiList = async () => {
+    try {
+        const response = await axios.get('http://34.192.1.4:8080/api/post/normal/?page=0&size=10');
+        return response.data.content;
+    } catch (error) {
+        console.error('Error fetching best item data from Spring:', error);
+        throw error;  
+};
+}
