@@ -5,8 +5,6 @@ import ProductGrid from './ProductGrid';
 import BestProductFilter from './BestProductFilter';
 
 
-
-//비즈니스 로직부분
 const BestProducts = (props) => {
 
     const [filtered, setFiltered] = useState("");
@@ -93,8 +91,4 @@ const List = styled.div`
  
   }
 `;
-
-
-
-
 

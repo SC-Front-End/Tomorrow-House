@@ -82,7 +82,3 @@ const FilterButton =styled.button`
     
 }
 `
-
-
-
-

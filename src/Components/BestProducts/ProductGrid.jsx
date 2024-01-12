@@ -8,7 +8,7 @@ const ProductGrid = ({ itemId, postId, thumbNailImgPath, title, content, unitPri
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/productDetail/${props.itemId}`);
+    navigate(`/productDetail/${itemId}`);
   };
 
   return (
@@ -61,7 +61,6 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   }
-
 `;
 
 const Img = styled.img`
@@ -153,7 +152,6 @@ const RankIcon = styled.div`
    /* 다른 요소보다 위에 나타나도록 설정 */
    z-index: 1;
 `;
-
 
 const IconWrapper = styled.div`
   top: 90px;
